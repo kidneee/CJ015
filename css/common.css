@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+/* ============================
+* フォント、背景
+* ========================= */
+:root {
+  /* 10px */
+  --font-10: 0.625rem;
+  /* 12px */
+  --font-12: 0.75rem;
+  /* 13px */
+  --font-13: 0.8125rem;
+  /* 14px */
+  --font-14: 0.875rem;
+  /* 16px */
+  --font-16: 1rem;
+  /* 18px */
+  --font-18: 1.125rem;
+  /* 20px */
+  --font-20: 1.25rem;
+  /* 24px */
+  --font-24: 1.5rem;
+  /* 28px */
+  --font-28: 1.75rem;
+  /* 32px */
+  --font-32: 2rem;
+  /* 36px */
+  --font-36: 2.25rem;
+  /* 2.5px */
+  --font-40: 2.25rem;
+  /* 72px */
+  --font-72: 4.5rem;
+  /* 14.4px */
+  --text-1: 0.9rem;
+
+  /* 文字カラー */
+  --font-black: #333;
+  --font-white: #fff;
+
+  /* ラインカラー */
+  --line-black: #000;
+  --line-white: #fff;
+
+  /* 背景色 */
+  --bg-main: #e6e2d7;
+  --bg-white: #fff;
+  --bg-yellow: rgba(249, 233, 6, .6);
+  --bg-red: rgba(149, 42, 38, .6);
+
+  /* ボタンカラー */
+  --btn-color: #4b4b4b;
+}
+
+/* メディアクエリ */
+/* @media screen and (max-width: 900px) {
+} */
+
+/* ============================
+* 共通
+* ========================= */
+body {
+  color: var(--font-black);
+  font-style: normal;
+  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-optical-sizing: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding-bottom: 160px;
+  }
+}
+
+a {
+  display: block;
+  cursor: pointer;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+ol {
+  list-style: none;
+}
+
+img {
+  height: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* more-link */
+.more-link,
+.page-link {
+  display: block;
+  color: var(--font-black);
+  font-size: var(--font-14);
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ============================
+* セクション
+* ========================= */
+.inner {
+  max-width: 1360px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+  .inner {
+    max-width: 900px;
+  }
+}
+
+/* セクションタイトル */
+.sec__title {
+  font-size: var(--font-14);
+  line-height: 1.5;
+  padding-top: 120px;
+  margin-bottom: 30px;
+}
+
+/* ページリンク */
+.sec__link-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* ============================
+* header
+* ========================= */
+.header {
+  position: fixed;
+  background: var(--bg-white);
+  width: 100%;
+  top: 0;
+}
+
+.header__inner {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ハンバーガメニュー */
+.header__menu-btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  z-index: 1001;
+}
+
+.header__menu-btn:hover {
+  cursor: pointer;
+}
+
+.header__menu-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--font-black);
+  transition: all 0.4s ease-in-out;
+}
+
+/* メニューオープン時のクラス */
+.menu-open .header__menu-line {
+  z-index: 1000000;
+  background-color: var(--font-white);
+}
+
+.menu-open .header__menu-line:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.menu-open .header__menu-line:nth-child(2) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.menu-open .header__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: right 0.4s ease;
+  padding-top: 36px;
+  padding-left: 50px;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 900px) {
+  .menu-open .header__menu {
+    padding-left: 0;
+  }
+}
+
+.menu-open .header__menu-list {
+  transform: translateX(50px);
+  transition: transform 0.5s ease;
+}
+
+/* メニューのスタイル */
+.header__menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+}
+
+.header__menu-list {
+  position: fixed;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  top: 36px;
+  transform: translateX(-100%);
+
+}
+
+.header__menu-link {
+  color: #fff;
+  font-size: var(--font-14);
+  line-height: 1.5;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.header__menu-link:hover {
+  opacity: 0.7;
+}
+
+/* ============================
+*  main
+* ========================= */
+.main {
+  flex: 1;
+}
+
+.sec__inner {
+  margin-bottom: 121px;
+}
+
+@media screen and (max-width: 900px) {
+  .sec__inner {
+    margin-bottom: 0;
+  }
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40.5px 34px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 900px) {
+  .products__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 19px;
+  }
+}
+
+.products__link {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--font-black);
+  font-size: var(--font-12);
+}
+
+@media screen and (max-width: 900px) {
+  .products__img {
+    width: 100%;
+  }
+}
+
+.products__title,
+.products__price {
+  display: block;
+  line-height: 1.5;
+}
+
+/* ============================
+* footer
+* ========================= */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 20px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding-bottom: 20px;
+  }
+}
+
+.footer__social-list {
+  display: flex;
+  gap: 30px;
+  color: var(--font-black);
+}
+
+.footer__link {
+  color: var(--font-black);
+  font-size: var(--font-12);
+  text-transform: uppercase;
+}
+
+.footer__copyright {
+  font-size: var(--font-10);
+}
