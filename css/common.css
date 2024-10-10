@@ -48,7 +48,7 @@
   --bg-main: #e6e2d7;
   --bg-white: #fff;
   --bg-red: #ff2a3a;
-  --bg-gray: #ccc;
+  --bg-gray: #e8e8e8;
 
   /* ボタンカラー */
   --btn-color: #4b4b4b;
@@ -414,7 +414,7 @@ img {
 }
 
 .students__icon {
-  background-color: var(--bg-gray);
+  background-color: #ccc;
   border-radius: 50%;
 }
 
@@ -465,8 +465,13 @@ img {
 }
 
 /* free trial */
+.free-trial {
+  padding-bottom: 120px;
+}
+
 .free-trial__desc {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .free-trial__desc--bold {
@@ -476,6 +481,56 @@ img {
   line-height: 1.15625;
 }
 
+.free-trial__link {
+  color: var(--font-white);
+  font-size: var(--font-28);
+  line-height: 1;
+  font-weight: 700;
+  background-color: var(--bg-red);
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  border-radius: 1000px;
+}
+
 /* ============================
 * footer
 * ========================= */
+.footer {
+  width: 100%;
+  background-color: var(--bg-gray);
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.footer-menu__ttl {
+  display: block;
+  font-size: var(--font-16);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-menu__link {
+  color: var(--font-black);
+  font-size: var(--font-14);
+  padding-left: 1em;
+}
+
+.footer__copyright {
+  display: block;
+  font-size: var(--font-10);
+  text-align: center;
+
+}
