@@ -26,11 +26,12 @@
         <span class="header-menu__line"></span>
 
         <nav class="header-menu">
+          <img src="./img/logo-w.svg" width="100" height="56" alt="BBB英会話スクール" class="header-logo__img">
           <ul class="header-menu__list">
-            <li class="header-menu__itm"><a href="./products.html" class="header-menu__link">BBBが選ばれる理由</a></li>
-            <li class="header-menu__itm"><a href="./about.html" class="header-menu__link">受講生の声</a></li>
-            <li class="header-menu__itm"><a href="./company.html" class="header-menu__link">スクールの概要</a></li>
-            <li class="header-menu__itm"><a href="mailto:xxxxx@xxx.xxx?subject=お問い合わせ" class="header-menu__link">無料体験に申し込む</a></li>
+            <li class="header-menu__itm"><a href="#reason" class="header-menu__link">BBBが選ばれる理由</a></li>
+            <li class="header-menu__itm"><a href="#student" class="header-menu__link">受講生の声</a></li>
+            <li class="header-menu__itm"><a href="#about" class="header-menu__link">スクールの概要</a></li>
+            <li class="header-menu__itm"><a href="mailto:xxxxx@xxx.xxx?subject=お問い合わせ" class="header-menu__link free-trial__menu-link">無料体験に申し込む</a></li>
           </ul>
         </nav>
       </div><!-- /.header-menu -->
@@ -47,17 +48,17 @@
         <a href="#" class="main__link">無料体験はこちら</a>
       </div>
       <div class="main-visual__img-wrapper">
-        <div class="main-visual__img1"></div>
-        <div class="main-visual__img2"></div>
-        <div class="main-visual__img3"></div>
+        <div class="main-visual__img1 main-visual__img"></div>
+        <div class="main-visual__img2 main-visual__img"></div>
+        <div class="main-visual__img3 main-visual__img"></div>
       </div>
     </div><!-- /.main-visual -->
 
-    <section class="reason sec">
+    <section id="reason" class="reason sec">
       <div class="reason__inner">
         <h2 class="reason__head sec__ttl">BBBが選ばれる理由</h2>
         <div class="reason__body">
-          <div class="reason__item">
+          <div class="reason__item js-slidein-left">
             <div class="reason__icon">
               <img src="./img/icon-pc.png" width="87" height="60" alt="">
             </div>
@@ -65,8 +66,8 @@
               <span class="reason__ttl">オンライン対応</span>
               <p class="reason__desc">24時間いつでも受講できる！</p>
             </div><!-- /.reason__text -->
-          </div><!-- /.reason__item -->
-          <div class="reason__item">
+          </div><!-- /.reason__item js-slidein-left-->
+          <div class="reason__item js-slidein-right">
             <div class="reason__icon">
               <img src="./img/icon-teacher.png" width="51" height="60" alt="">
             </div>
@@ -74,59 +75,65 @@
               <span class="reason__ttl">講師はネイティブ</span>
               <p class="reason__desc">お気に入りの講師が自由に選べる！</p>
             </div><!-- /.reason__text -->
-          </div><!-- /.reason__item -->
+          </div><!-- /.reason__item js-slidein-right -->
         </div><!-- /.reason__body -->
       </div><!-- /.reason__inner sec__inner -->
     </section>
 
-    <section class="students sec">
+    <section id="student" class="student sec">
       <div class="sec__inner">
-        <h2 class="students__head sec__ttl">受講生の声</h2>
-        <div class="students__body">
-          <div class="student1 students__item">
-            <div class="students__img">
-              <img src="./img/icon-student1.png" width="120" height="120" class="students__icon" alt="">
-              <span class="students__txt">
+        <h2 class="student__head sec__ttl">受講生の声</h2>
+        <div class="student__body">
+          <div class="student1 student__item js-zoomin">
+            <div class="student__img">
+              <img src="./img/icon-student1.png" width="120" height="120" class="student__icon" alt="">
+              <span class="student__name">
                 ○○○さん<br>
                 大学生
               </span>
             </div>
-            <p class="students__desc">
-              テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
-          </div><!-- /.student1 students__item -->
-          <div class="student2 students__item">
-            <div class="students__img">
-              <img src="./img/icon-student2.png" width="120" height="120" class="students__icon" alt="">
-              <span>
+            <div class="balloon">
+              <p class="student__desc">
+                テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div><!-- /.balloon -->
+          </div><!-- /.student1 student__item-->
+          <div class="student2 student__item js-zoomin">
+            <div class="student__img">
+              <img src="./img/icon-student2.png" width="120" height="120" class="student__icon" alt="">
+              <span class="student__name">
                 ○○○さん<br>
                 会社員
               </span>
             </div>
-            <p class="students__desc">
-              テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
-          </div><!-- /.student2 students__item -->
-          <div class="student3 students__item">
-            <div class="students__img">
-              <img src="./img/icon-student3.png" width="120" height="120" class="students__icon" alt="">
-              <span>
+            <div class="balloon">
+              <p class="student__desc">
+                テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div><!-- /.balloon -->
+          </div><!-- /.student2 student__item-->
+          <div class="student3 student__item js-zoomin">
+            <div class="student__img">
+              <img src="./img/icon-student3.png" width="120" height="120" class="student__icon" alt="">
+              <span class="student__name">
                 ○○○さん<br>
                 自営業
               </span>
             </div>
-            <p class="students__desc">
-              テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
-          </div><!-- /.student3 students__item -->
-        </div><!-- /.students__body -->
+            <div class="balloon">
+              <p class="student__desc">
+                テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div><!-- /.balloon -->
+          </div><!-- /.student3 student__item-->
+        </div><!-- /.student__body -->
       </div><!-- /.sec__inner -->
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="about__inner">
         <h2 class="about__head sec__ttl">スクールの概要</h2>
         <div class="about__body sec__inner">
@@ -216,11 +223,7 @@
     </div>
   </footer>
 
-  <!-- ハンバーガーメニュー -->
-  <script>
-    document.querySelector('.header-menu__btn').addEventListener('click', function () {
-      document.body.classList.toggle('menu-open');
-    });
-  </script>
+  <script src="./main.js"></script>
+
 </body>
 </html>
